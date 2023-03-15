@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/*a tag root serve para declarar variaveis no css*/
+:root{
+    --cor-principal:#222831;
+    --cor-secundaria:#EEEEEE;
+    --cor-terciaria: #00ADB5;
+    --cor-hover:#393E46;
+
+    --fonte-principal:'Krona One', sans-serif;
+    --fonte-secundaria:'Montserrat', sans-serif;
+}
+*{
+    /*essa tag reseta o css*/
+    padding: 0;
+    margin:0;
+}
+body{
+   box-sizing: border-box; /*serve para os itens nao sairem da box selecionada ou seja neste caso o body*/
+   /*height: 100vh;100vh serve para o site usar 100% da tela*/
+   background-color:var(--cor-principal);
+   color: var(--cor-secundaria);
+}
+.menu-home{
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+.menu{
+    display: flex;
+    gap: 80px;
+}
+.container-navigator-bar{
+    padding: 2% 0 0 15% ;/*a ordem do padding é primeiro SUPERIOR, DIREITO,INFERIOR E ESQUERDO */
+}
+.container-main{
+    padding: 8% 15% ;/*define o tamanho da margin e o segundo numero define o tamanho da margin horizontal*/
+    justify-content: space-between;/*da um espaço entre os itens*/
+    display: flex;/*deixa os itens flexiveis para melhor adiminstraçao*/
+    align-items: center;/*alinha os itens no centro ou aonde selecionado*/
+    /*flex-direction: column;*/
+    gap: 82px;
+    
+}
+.container-section1{
+    width: 50%;
+    display: flex;
+    flex-direction: column;/*direçao dos itens flexiveis do container*/
+    gap: 40px; /*espaço entre os itens desse container*/
+}
+.strong_1{
+    color: var(--cor-terciaria);
+}
+.titulo{
+    font-size: 2.25rem; /*tamanho da fonte*/
+    font-family:var(--fonte-principal);/*usa a fonte importada*/
+}
+.subtitulo{
+    font-size: 1.75rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.paragrafo1{
+    font-size:1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+.container-botao{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.bnt{
+    /*background-color: #22D4FD;*/
+    display: flex;
+    justify-content: center;/* o justify-content:center; ele alinha os itens no centro*/
+    gap: 16px;/*define espaço entre os itens*/
+    width: 378px;
+    text-align: center;/*alinha o texto no centro da onde ele esta inserido*/
+    border-radius:8px;/*é o arredondamento da borda do item*/
+    font-size: 1.5rem;
+    font-weight: 600;/*peso da font*/
+    padding: 21.5px 0 ;/*espaço da borda ate o conteudo e o 0 é o espaçamento na horizontal*/
+    color: #f6f6f6;
+    font-family: var(--fonte-secundaria);
+    text-decoration: none;/*seleciona a decoraçao do texto*/
+    border: 2px solid var(--cor-terciaria);
+
+}
+.titulo_dos_botoes{
+    font-family:var(--fonte-principal);
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+.bnt:hover{
+    background-color:var(--cor-hover);
+}
+img{
+    width: 34%;
+    /*height: 30%;*/
+    border-radius: 20px;
+}
+.imginsta{
+    width: 32px;
+    height: 32px
+}
+.imggit{
+    width: 32px;
+    height: 32px
+}
+.rodape{
+    background-color:var(--cor-terciaria);
+    color: var(--cor-principal);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width:1200px){
+    .container-main{
+        padding: 10%;/*a ordem do padding é primeiro SUPERIOR, DIREITO,INFERIOR E ESQUERDO */
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .container-main{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .container-section1{
+        width: auto;
+    }
+    
+}
